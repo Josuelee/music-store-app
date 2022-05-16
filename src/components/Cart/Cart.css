@@ -1,0 +1,66 @@
+.music__cart--background {
+  background-color: var(--cart-menu-color);
+  position: fixed;
+  top: 0;
+  z-index: 2000;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+}
+
+.music__cart {
+  background-color: #fff;
+  width: 35%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  overflow-y: scroll;
+}
+
+.music__cart-content {
+  width: 90%;
+  height: 95%;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.music__cart-content h2 {
+  margin: 2rem 0;
+  font-family: var(--title-font);
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+
+.music__cart-close {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: red;
+  font-size: 40px;
+}
+
+.music__cart-products {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.music__cart-button:disabled {
+  background-color: #eee;
+  color: var(--second-color);
+}
+
+.music__cart-info {
+  display: flex;
+}
+
+.music__cart-shopping {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}

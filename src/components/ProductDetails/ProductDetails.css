@@ -1,0 +1,45 @@
+.music__detail-error h2 {
+  font-size: 60px;
+}
+
+.music__back-to-products {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.music__product_details-container {
+  display: flex;
+  gap: 3rem;
+}
+
+.music__product_details-image {
+  flex: 0.5;
+  box-shadow: 3px 5px 9px var(--first-color);
+}
+
+.music__product_details-image img {
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.music__product_details-data {
+  flex: 1;
+}
+
+.music__product_details-data h2 {
+  margin: 0;
+}
+
+.music__product_details-data h3 {
+  color: var(--second-color);
+  font-size: 30px;
+  font-family: var(--title-font);
+}
+
+.music__product_details-data p {
+  text-align: justify;
+  color: var(--first-color);
+  letter-spacing: 1px;
+}

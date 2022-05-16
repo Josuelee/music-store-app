@@ -1,0 +1,20 @@
+.music__products {
+  text-align: center;
+}
+
+.music__products-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5rem;
+}
+
+.music__products-all {
+  flex: 3;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+.music__products-filters {
+  flex: 1;
+}

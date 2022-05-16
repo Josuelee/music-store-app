@@ -1,0 +1,7 @@
+.music__header-banner {
+  background-image: url(../../assets/banner-picture1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 89.9vh;
+}

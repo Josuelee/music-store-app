@@ -1,0 +1,48 @@
+.music__address-title {
+  color: var(--first-color);
+  font-size: 20px;
+  text-align: left;
+  margin: 0;
+}
+
+.music__address-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.music__address-section {
+  display: flex;
+
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.music__address-section label {
+  font-size: 20px;
+  color: var(--first-color);
+  display: block;
+}
+
+.music__address-section input,
+select {
+  display: block;
+  border: none;
+  border-bottom: thin solid rgb(214, 214, 214);
+  border-radius: 5px;
+  width: 100%;
+  outline: none;
+  padding: 0.1rem;
+  color: var(--third-color);
+  font-family: var(--main-font);
+  font-size: 18px;
+}
+
+.music__address-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.music__address-buttons input {
+  margin-top: 3rem;
+  margin-right: 1rem;
+}
