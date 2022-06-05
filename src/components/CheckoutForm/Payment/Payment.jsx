@@ -22,7 +22,11 @@ const Payment = ({ handleCaptureCheckout }) => {
   const handleSubmit = async (e, elements, stripe) => {
     e.preventDefault();
 
+    
+
     if (!stripe || !elements) return;
+
+    
 
     const cardElement = elements.getElement(CardElement);
     const { error, paymentMethod } = await stripe.createPaymentMethod({
@@ -30,6 +34,7 @@ const Payment = ({ handleCaptureCheckout }) => {
       card: cardElement,
     });
 
+    
     if (error) {
       console.log(error);
     } else {

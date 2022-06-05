@@ -245,7 +245,7 @@ const Address = () => {
           <input
             type="submit"
             className="btn-style"
-            value="Back to products"
+            value="Back"
             onClick={() => navigate("/products")}
           />
           <input type="submit" className="btn-style" value="Next" />

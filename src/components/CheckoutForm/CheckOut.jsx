@@ -46,6 +46,7 @@ const Checkout = () => {
     const newCart = await commerce.cart.refresh();
 
     dispatch({ type: REFRESH_CART, payload: newCart });
+    
   };
 
   const handleCaptureCheckout = async (tokenId, newOrder) => {

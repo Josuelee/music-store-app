@@ -7,6 +7,19 @@
   margin-bottom: 2rem;
 }
 
+@media screen and (max-width: 500px) {
+  .music__cart_product {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 350px) {
+
+  .music__cart_product {
+    margin-top: 2rem;
+  }
+
+}
 .music__cart_product_img {
   flex: 0.3;
   width: 100%;
@@ -35,6 +48,13 @@ h4 {
   color: var(--first-color);
   font-family: var(--title-font);
   font-size: 18px;
+}
+
+@media screen and (max-width: 500px) {
+  .music__cart_product_info h3,
+  h4 {
+    font-size: 15px;
+  }
 }
 
 .music__cart_product_info h4 {

@@ -16,6 +16,15 @@
 .music__review_container {
   margin: 1rem 0;
 }
+.music__review_list {
+  margin: 1.4rem 0;
+} 
+
+@media screen and (min-width: 450px) {
+  .music__review_list {
+    margin: 0;
+  } 
+}
 
 .music__review_list p,
 .music__review_total p {
@@ -27,10 +36,21 @@
   text-align: left;
 }
 
+
 .music__review_data {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
+
+@media screen and (min-width: 350px) {  
+  .music__review_data {    
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+
+
 .music__review_data p {
   color: var(--third-color);
 }
