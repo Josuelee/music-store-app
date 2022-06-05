@@ -9,8 +9,18 @@
 
 .music__product_details-container {
   display: flex;
+  flex-direction: column;
   gap: 3rem;
 }
+
+@media screen and (min-width: 750px) {
+  .music__product_details-container {
+    display: flex;
+    flex-direction: row;    
+    gap: 3rem;    
+  }
+}
+
 
 .music__product_details-image {
   flex: 0.5;

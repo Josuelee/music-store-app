@@ -144,4 +144,5 @@
   transform: initial;
   color: var(--first-color);  
   font-size: 40px;
+  font-family: var(--title-font);
 }

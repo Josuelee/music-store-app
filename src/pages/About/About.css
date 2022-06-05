@@ -5,4 +5,5 @@
 .music__about p {
   font-size: 18px;
   color: var(--first-color);
+  text-align: justify;
 }

@@ -5,6 +5,8 @@ import { Loader } from "../../../components";
 import { useProducts } from "../../../hooks/useProducts";
 import { commerce } from "../../../lib/commerce";
 
+import "./Filters.css"
+
 const initialFilter = {
   range: 3000,
   category: "",
@@ -99,72 +101,86 @@ const Filters = () => {
 
   return (
     <form
-      className="music__products-filters"
+      className="music__filters"
       onSubmit={(e) => e.preventDefault()}
     >
-      <div>
-        <label htmlFor="search">Search</label>
-        <input
-          type="search"
-          name="search"
-          id="search"
-          value={filters.search}
-          onChange={handleSearchChange}
-          onFocus={handleFocusSearch}
-          onBlur={handleBlur}
-          disabled={searchEnabled}
-        />
-      </div>
-      {loading && <Loader />}
-      {loading || (
-        <div>
-          <div>
-            <label htmlFor="all">All</label>
-            <input
-              type="radio"
-              name="category"
-              id="all"
-              value="All"
-              onChange={handleChange}
-              onClick={handleClickCategories}
-              onFocus={handleFocusCategories}
-              onBlur={handleBlur}
-              disabled={categoriesEnabled}
-            />
-          </div>
-          {categories.map((category) => (
-            <div key={category.id}>
-              <label htmlFor={category.id}>{category.name}</label>
-              <input
-                type="radio"
-                name="category"
-                id={category.id}
-                value={category.id}
-                onChange={handleChange}
-                onClick={handleClickCategories}
-                onFocus={handleFocusCategories}
-                onBlur={handleBlur}
-                disabled={categoriesEnabled}
-              />
-            </div>
-          ))}
+      <div className="music__filters-container">
+        <div className="music__filters-search-container">          
+          <input
+            type="search"
+            name="search"
+            id="search"
+            value={filters.search}
+            onChange={handleSearchChange}
+            onFocus={handleFocusSearch}
+            onBlur={handleBlur}
+            disabled={searchEnabled}
+            placeholder="Search..."
+            className="music__filters-search"
+          />
         </div>
-      )}
-      <div>
-        <input
-          type="range"
-          name="range"
-          min={0}
-          max={20000}
-          value={filters.range}
-          id="range"
-          onChange={handleChange}
-          onInput={handleInputRange}
-          onFocus={handleFocusRange}
-          onBlur={handleBlur}
-          disabled={rangeEnabled}
-        />
-        <label htmlFor="range">$ {filters.range}</label>
+        {loading && <Loader />}
+        {loading || (
+          <div className="music__filters-categories-container">
+            <p className="music__filters-categories-title">Categories</p>
+            <div className="music__filters-category">
+              <div>
+                <label htmlFor="all">All</label>
+                <input
+                  type="radio"
+                  name="category"
+                  id="all"
+                  value="All"
+                  onChange={handleChange}
+                  onClick={handleClickCategories}
+                  onFocus={handleFocusCategories}
+                  onBlur={handleBlur}
+                  disabled={categoriesEnabled}
+                />
+              </div>
+            </div>
+            {categories.map((category) => (
+              <div key={category.id} className="music__filters-category">
+                <div>
+                  <label htmlFor={category.id}>{category.name}</label>
+                  <input
+                    type="radio"
+                    name="category"
+                    id={category.id}
+                    value={category.id}
+                    onChange={handleChange}
+                    onClick={handleClickCategories}
+                    onFocus={handleFocusCategories}
+                    onBlur={handleBlur}
+                    disabled={categoriesEnabled}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+        <div className="music__filters-range-container">
+          <p className="music__filters-range-title">Range</p>
+          <div className="music__filters-range">
+            <input
+            type="range"
+            name="range"
+            min={0}
+            max={20000}
+            value={filters.range}
+            id="range"
+            onChange={handleChange}
+            onInput={handleInputRange}
+            onFocus={handleFocusRange}
+            onBlur={handleBlur}
+            disabled={rangeEnabled}
+          />
+          <div className="music__filters-range-value">
+            <span>Value:</span>
+            <label htmlFor="range">$ {filters.range}</label>
+          </div>
+          </div>                  
+        </div>
       </div>
     </form>
   );
